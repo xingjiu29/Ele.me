@@ -1,0 +1,10 @@
+#!name=淘宝闪购
+#!desc=删除底栏的「AI点外卖」
+#!author=杏九
+#!tag=去广告
+#!system=ios
+#!loon_version=3.5.3(1014)
+[Script]
+http-response ^https?:\/\/[^\/]+\/gw\/mtop\.alsc\.eleme\.bottomtab script-path=https://raw.githubusercontent.com/xingjiu29/Ele.me/refs/heads/main/EleMe.js?v=1, requires-body=true, timeout=30
+[MitM]
+hostname = %APPEND% acs.m.taobao.com, guide-acs.m.taobao.com, mtop.ele.me
