@@ -1,0 +1,10 @@
+#!name=淘宝闪购去广告
+#!desc=删除闪购底栏的「AI点外卖」
+#!author=杏九
+#!tag=去广告
+#!system=ios
+#!loon_version=3.5.3(1014)
+[Script]
+http-response ^https?:\/\/[^\/]+\/gw\/mtop\.alsc\.eleme\.bottomtab script-path=https://raw.githubusercontent.com/你的用户名/你的仓库/main/taobao-shangou-tab.js?v=1, requires-body=true, timeout=30
+[MitM]
+hostname = %APPEND% acs.m.taobao.com, guide-acs.m.taobao.com, mtop.ele.me
